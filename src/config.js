@@ -11,8 +11,8 @@ const enableWorkers = os.cpus().length !== 1;
 module.exports = {
     //// HOSTING CONFIGURATION ////
 
-    bindingAddress: '127.0.0.1',
-    port: 8080,
+    bindingAddress: '0.0.0.0',
+    port: process.env.PORT || 8080,
     crossDomainPort: 8081,
     publicDir: path.join(__dirname, '../public'), // set to null to disable
 
